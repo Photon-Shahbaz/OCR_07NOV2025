@@ -1,0 +1,4 @@
+    'supplier': (94, 229, 640, 40),    # (x, y, width, height)
+    'gd number': (93, 2605, 223, 72),   # second location
+
+pytesseract.pytesseract.tesseract_cmd = r'C:\Program Files (x86)\Tesseract-OCR\tesseract.exe'
