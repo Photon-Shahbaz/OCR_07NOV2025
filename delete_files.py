@@ -48,3 +48,28 @@ folder_path_input = r"C:\Users\HP\PycharmProjects\Image_processing-master\images
 
 # Run the deletion function
 delete_gd_input(folder_path_input)
+
+#################################################################
+# Empty output folder from cluttered file portions:
+
+def delete_gd_output(folder_path_output):
+    # List all files in the specified folder
+    for file_name in os.listdir(folder_path_output):
+        # Check if the file name starts with "GD-"
+        if file_name.startswith("GD-"):
+            # Construct the full file path
+            file_path = os.path.join(folder_path_output, file_name)
+
+            try:
+                # Delete the file
+                os.remove(file_path)
+                print(f"Deleted: {file_path}")
+            except Exception as e:
+                print(f"Failed to delete {file_path}: {e}")
+
+
+# Specify the folder path
+folder_path_output = r"C:\Users\HP\PycharmProjects\OCR\output"
+
+# Run the deletion function
+delete_gd_output(folder_path_output)
