@@ -85,8 +85,8 @@ def process_image_file(image_file, input_folder, output_folder, edited_folder, r
 
 def main():
     input_folder = r"C:\Users\HP\PycharmProjects\Image_processing-master\images\static"
-    output_folder = "output"
-    edited_folder = "edited"
+    output_folder = r"C:\Users\HP\PycharmProjects\OCR\output"
+    edited_folder = r"C:\Users\HP\PycharmProjects\OCR\edited"
     os.makedirs(output_folder, exist_ok=True)
     os.makedirs(edited_folder, exist_ok=True)
 
@@ -102,7 +102,7 @@ def main():
         excel_path = os.path.join(output_folder, "extracted_data.xlsx")
         df = pd.DataFrame(records)
         df.to_excel(excel_path, index=False)
-        print(f"\n✅ All extracted data saved to Excel: {excel_path}")
+        print(f"\n All extracted data saved to Excel: {excel_path}")
 
 
 if __name__ == "__main__":
